@@ -271,11 +271,17 @@
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;我的博客第一次提交&#34;</span> 
 </span></span><span style="display:flex;"><span>git remote add origin git@github.com:Moyujojo/moyujojo.github.io.git
 </span></span><span style="display:flex;"><span>git push <span style="color:#75715e"># 这里报错The current branch master has no upstream branch.</span>
+</span></span><span style="display:flex;"><span>git push -u origin master
 </span></span><span style="display:flex;"><span>git push --set-upstream origin master
 </span></span></code></pre></div></li>
 <li>
 <p>至此，远端推送成功</p>
-</li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># 修改文章时，新建分支。</span>
+</span></span><span style="display:flex;"><span>git checkout -b lw
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;我的博客第2次提交&#34;</span> 
+</span></span><span style="display:flex;"><span>git push -u origin lw
+</span></span></code></pre></div></li>
 </ul>
 <h2 id="4查看自己的博客">4.查看自己的博客</h2>
 <p>访问网站：<a href="https://moyujojo.github.io/">My New Hugo Site (moyujojo.github.io)</a></p>

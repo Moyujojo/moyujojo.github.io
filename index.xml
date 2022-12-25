@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://moyujojo.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Dec 2022 13:25:22 +0800</lastBuildDate><atom:link href="https://moyujojo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo搭建个人博客教程</title>
+      <link>https://moyujojo.github.io/post/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sun, 25 Dec 2022 13:25:22 +0800</pubDate>
+      
+      <guid>https://moyujojo.github.io/post/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
+      <description>Hugo搭建个人博客教程 本教程适用于Windows端，我电脑的系统是Windows11。如果你使用的是其他操作系统，可以去参考hugo官方文档
+1.安装hugo hugo官方文档 中，推荐使用 Scoop 作为包管理器。
+1.1 安装Scoop 安装
+安装一般分为三步：配置运行环境，安装Scoop，测试Scoop
+配置运行环境
+一般要求 powershell 处于可远程执行的状态，所以需要切换运行策略 （ExecutionPolicy）
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser 如果需要确认，直接按 Y 确认
+安装Scoop
+可以参考Gitee作者 RubyKids 的文章 scoop 国内一键安装脚本 (gitee.com)
+在PowerShell中运行
+iwr -useb https://gitee.com/RubyKids/scoop-cn/raw/main/install.ps1 | iex 测试Scoop
+使用 help 命令来测试 Scoop 的状态
+scoop help 出现命令日志说明 scoop 安装成功
+1.2 安装hugo scoop install hugo ## 或者 scoop install hugo-extended 安装成功后，测试 hugo 是否安装成功
+hugo version 2. 使用 hugo 快速入门： 1. 创建网站 2. 添加内容 3.</description>
+    </item>
+    
+  </channel>
+</rss>

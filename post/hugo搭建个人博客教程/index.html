@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.109.0">
+
+  <title>Hugo搭建个人博客教程 &middot; My New Hugo Site</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+
+  <link rel="shortcut icon" href="https://moyujojo.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small></small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Hugo搭建个人博客教程</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>25 Dec 2022, 13:25</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  <h1 id="hugo搭建个人博客教程">Hugo搭建个人博客教程</h1>
+<p>本教程适用于Windows端，我电脑的系统是Windows11。如果你使用的是其他操作系统，可以去参考<a href="https://gohugo.io/installation/">hugo官方文档</a></p>
+<h2 id="1安装hugo">1.安装hugo</h2>
+<p><a href="https://gohugo.io/installation/">hugo官方文档</a> 中，推荐使用 Scoop 作为包管理器。</p>
+<h3 id="11-安装scoop">1.1 安装Scoop</h3>
+<p><strong>安装</strong></p>
+<p>安装一般分为三步：配置运行环境，安装Scoop，测试Scoop</p>
+<p><strong>配置运行环境</strong></p>
+<p>一般要求 powershell 处于可远程执行的状态，所以需要切换运行策略 （ExecutionPolicy）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+</span></span></code></pre></div><p>如果需要确认，直接按 Y 确认</p>
+<p><strong>安装Scoop</strong></p>
+<p>可以参考Gitee作者 <a href="https://gitee.com/RubyKids">RubyKids</a> 的文章 <a href="https://gitee.com/RubyKids/scoop-cn">scoop 国内一键安装脚本 (gitee.com)</a></p>
+<p>在PowerShell中运行</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>iwr -useb https://gitee.com/RubyKids/scoop-cn/raw/main/install.ps1 | iex
+</span></span></code></pre></div><p><strong>测试Scoop</strong></p>
+<p>使用 help 命令来测试 Scoop 的状态</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scoop help
+</span></span></code></pre></div><p>出现命令日志说明 scoop 安装成功</p>
+<h3 id="12-安装hugo">1.2 安装hugo</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>scoop install hugo
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## 或者</span>
+</span></span><span style="display:flex;"><span>scoop install hugo-extended
+</span></span></code></pre></div><p>安装成功后，测试 hugo 是否安装成功</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><h2 id="2-使用-hugo">2. 使用 hugo</h2>
+<p><strong>快速入门：</strong> 1. 创建网站  2. 添加内容  3. 配置站点  4. 发布网站</p>
+<p><strong>先决条件：</strong> 1. 安装 hugo  2. 安装了 git</p>
+<h3 id="21-创建网站">2.1 创建网站</h3>
+<ul>
+<li>
+<p>创建一个项目</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo new site myblog
+</span></span></code></pre></div></li>
+<li>
+<p>将当前目录更改为项目的根目录</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd myblog
+</span></span></code></pre></div></li>
+<li>
+<p>在项目根目录进行 git 初始化</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git init
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="22-下载并且设置主题">2.2 下载并且设置主题</h3>
+<p>本次演示我们下载 <a href="https://themes.gohugo.io/themes/blackburn/">Blackburn |Hugo Themes (gohugo.io)</a> 这个主题</p>
+<p>在项目的根目录下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/yoshiharuyamashita/blackburn.git themes/blackburn
+</span></span></code></pre></div><p>将一行追加到网站配置文件，指示当前主题。 在根目录的 config.toml 中添加</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>theme <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;blackburn&#39;</span>
+</span></span></code></pre></div><p>启动 Hugo 的开发服务器以查看站点</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo server -t blackburn --buildDrafts
+</span></span></code></pre></div><h3 id="23-设置文章">2.3 设置文章</h3>
+<ul>
+<li>新建一篇文章</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo new post/Hugo搭建个人博客教程.md
+</span></span></code></pre></div><ul>
+<li>
+<p>修改文章内容</p>
+</li>
+<li>
+<p>重新启动 Hugo 的开发服务器</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo server -t blackburn --buildDrafts
+</span></span></code></pre></div><h2 id="3-将个人博客部署到远端服务器">3. 将个人博客部署到远端服务器</h2>
+<ul>
+<li>
+<p>在Github中建立一个仓库，仓库名为<code>用户名.github.io</code> ，用户名必须是小写</p>
+</li>
+<li>
+<p>部署</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>hugo --theme<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;blackburn&#39;</span> --baseURL<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://moyujojo.github.io/&#39;</span> --buildDrafts
+</span></span></code></pre></div><p>然后会在根目录下生成一个 public 文件夹</p>
+</li>
+<li>
+<p>将 public 文件夹内的东西上传到 github 仓库</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd .<span style="color:#ae81ff">\p</span>ublic<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>git init
+</span></span><span style="display:flex;"><span>git add .
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;我的博客第一次提交&#34;</span> 
+</span></span><span style="display:flex;"><span>git remote add origin git@github.com:Moyujojo/moyujojo.github.io.git
+</span></span><span style="display:flex;"><span>git push <span style="color:#75715e"># 这里报错The current branch master has no upstream branch.</span>
+</span></span><span style="display:flex;"><span>git push --set-upstream origin master
+</span></span></code></pre></div></li>
+<li>
+<p>至此，远端推送成功</p>
+</li>
+</ul>
+<h2 id="4查看自己的博客">4.查看自己的博客</h2>
+<p>访问网站：<a href="https://moyujojo.github.io/">My New Hugo Site (moyujojo.github.io)</a></p>
+
+  
+  <h4><i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmoyujojo.github.io%2fpost%2fhugo%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A2%25E6%2595%2599%25E7%25A8%258B%2f" target="_blank" title="Share on Facebook"><i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=https%3a%2f%2fmoyujojo.github.io%2fpost%2fhugo%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A2%25E6%2595%2599%25E7%25A8%258B%2f" target="_blank" title="Tweet"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=https%3a%2f%2fmoyujojo.github.io%2fpost%2fhugo%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A2%25E6%2595%2599%25E7%25A8%258B%2f" target="_blank" title="Share on Google+"><i class="fab fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=https%3a%2f%2fmoyujojo.github.io%2fpost%2fhugo%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A2%25E6%2595%2599%25E7%25A8%258B%2f" target="_blank" title="Post to Tumblr"><i class="fab fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=https%3a%2f%2fmoyujojo.github.io%2fpost%2fhugo%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A2%25E6%2595%2599%25E7%25A8%258B%2f" target="_blank" title="Pin it"><i class="fab fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=https%3a%2f%2fmoyujojo.github.io%2fpost%2fhugo%25E6%2590%25AD%25E5%25BB%25BA%25E4%25B8%25AA%25E4%25BA%25BA%25E5%258D%259A%25E5%25AE%25A2%25E6%2595%2599%25E7%25A8%258B%2f" target="_blank" title="Submit to Reddit"><i class="fab fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://moyujojo.github.io/js/ui.js"></script>
+<script src="https://moyujojo.github.io/js/menus.js"></script>
+
+
+
+
+
+
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+
